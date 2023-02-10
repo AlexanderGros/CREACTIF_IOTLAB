@@ -9,7 +9,7 @@ import machine
 
 
 adc = machine.ADC()               # create an ADC object
-apin = adc.channel(pin='P15')
+apin = adc.channel(pin='P16')
 
 # Light measurment
 def light_measure():
@@ -33,7 +33,7 @@ lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an OTAA authentication parameters, change them to the provided credentials
 app_eui = ubinascii.unhexlify('0000000000000000')
-app_key = ubinascii.unhexlify('EFE2E2A8F7BA001DF112FABB92B742C6')  # to modify for each node !!
+app_key = ubinascii.unhexlify('xxxxxxxxxxxxxxxx')  # to modify for each node !!
 
 # join a network using OTAA (Over the Air Activation)
 #uncomment below to use LoRaWAN application provided dev_eui
