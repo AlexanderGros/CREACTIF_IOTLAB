@@ -1,0 +1,32 @@
+
+
+On va installer pymakr manuellement et bypasser leur système git.
+
+Suivre la procédure:
+
+Regarder quelle version d'atom vous avez (ouvrir atom et ouvrir 'Help' et 'About atom'), si vous avez une version inférieure ou égale à 1.60 c'est ok,
+sinon vous pouvez installer via: https://github.com/atom/atom/releases/tag/v1.60.0                 (désinstaller toute autre version avant...)
+Pour windows choisir le Atomsetup x64 exe.
+
+Fermer atom !
+
+Aller dans le dossier packages de atom (.../user/'nom'/.atom/packages) -> c'est l'endroit d'installation par défaut normalement.
+Et y 'dézipper' le code complet de https://github.com/pycom/pymakr-atom             (il faut que tous les fichiers soient visibles ! )
+
+Dans le lien il y a le reste de la procédure sous linux, je traduit pour windows:
+Ouvrir une fenêtre cli du dos (command prompt ou powershell) -> dans votre barre de recherche windows taper cmd
+
+Aller dans le dossier ou vous avez dézippé le dossier pymakr:
+commande du cli:     
+cd   : change directory
+dir  : afficher le contenu du dossier (équivalent du ls sous linuc -> ls pour list)
+
+Par défaut (normalement) vous étes dans ../user/'votre_nom'/ donc il suffit de taper:
+cd .atom
+cd packages
+
+Puis une fois dans le bon dossier:
+apm link                (apm devrait etre installé par défaut si atom est installé)
+apm install
+
+Démarrer atom, checker que tout va bien et vérifier que pymakr est présent dans vos packages.
